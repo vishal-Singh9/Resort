@@ -1,0 +1,117 @@
+.subscription-warp {
+    padding-top: 125px;
+    padding-bottom: 125px;
+ position: relative;
+  }
+ 
+  
+  .subscription-image {
+    animation-name: fadeInLeft;
+    animation-duration: 600ms;
+    animation-timing-function: ease;
+    animation-delay: 0ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+  }
+  
+  .subscription-shape1,
+  .subscription-shape2 {
+    max-width: 100%;
+  }
+  
+  .subscription-content {
+    animation-name: fadeInUp;
+    animation-duration: 600ms;
+    animation-timing-function: ease;
+    animation-delay: 0ms;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    margin-left: 100px;
+  }
+  
+  .title {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subscription-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .subscription-content p {
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    position: relative;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-control.error {
+    border-color: red;
+  }
+  
+  .default-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #56aa57;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .default-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .mchimp-errmessage,
+  .mchimp-sucmessage {
+    color: red;
+  }
+  
+  .mchimp-sucmessage {
+    color: rgb(2, 57, 9);
+  }
+  
+  .all-shapes {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  

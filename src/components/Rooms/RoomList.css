@@ -1,0 +1,28 @@
+/* RoomList.css */
+.room-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+  }
+  
+  .room-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    flex: 3;
+  }
+  
+  .booked-rooms {
+    flex: 1;
+    padding: 20px;
+    border-left: 2px solid #ddd;
+  }
+  
+  .booked-room {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

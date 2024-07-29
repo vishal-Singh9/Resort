@@ -1,0 +1,50 @@
+.blog-card {
+    border: 1px solid #0b0101;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  
+  .blog-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1.02);
+  }
+  
+  .blog-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-card-content {
+    padding: 15px;
+  }
+  
+  .blog-card-title {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #010005;
+  }
+  
+  .blog-card-excerpt {
+    color: #0a0101;
+    margin: 10px 0;
+  }
+  
+  .blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .blog-card-read-more {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .blog-card-read-more:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,22 @@
+.copy-right-warp {
+    padding: 20px 0;
+    background-color: #020c16;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  
+  .copy-right-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #f6e9e9;
+  }
+  
+  .copy-right-content a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .copy-right-content a:hover {
+    text-decoration: underline;
+  }
+  

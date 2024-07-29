@@ -1,0 +1,113 @@
+/* HomePage.css */
+
+.bg {
+  position: relative;
+
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.home-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-slider-warp {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the left */
+  position: relative;
+}
+
+.container-fluid {
+  max-width: 1200px; /* Adjust based on your design */
+  width: 50%;
+  text-align: center;
+  color: white;
+  padding: 2px;
+  box-sizing: border-box;
+
+ 
+}
+
+.content {
+  z-index: 2;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.freezing {
+  list-style: none;
+  padding: 0;
+  margin: 2px 0 0;
+  display: flex;
+  justify-content: flex-start;
+
+  color: #000;
+}
+
+.freezing li {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  color: rgb(4, 0, 0);
+}
+
+.freezing img {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .freezing li {
+    margin: 0 5px;
+  }
+}

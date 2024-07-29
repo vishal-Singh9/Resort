@@ -1,0 +1,136 @@
+/* Container Styling */
+.fun-fact-warp {
+  padding: 125px 0;
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  width: 100%;
+  margin-top: 150px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Row Styling */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Column Styling */
+.col-lg-3, .col-md-4, .col-sm-6, .col-6 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 991.98px) {
+  .col-lg-3 {
+      flex: 0 0 33.3333%;
+      max-width: 33.3333%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .col-md-4, .col-lg-3 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .col-sm-6, .col-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .fun-fact-warp {
+      padding: 60px 0;
+      height: auto;
+      margin-top: 100px;
+  }
+
+  .fun-fact-card {
+      padding: 15px;
+  }
+
+  .counter {
+      font-size: 2.5rem;
+  }
+
+  .plus {
+      font-size: 1.5rem;
+  }
+
+  .fun-fact-card p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Card Styling */
+.fun-fact-card {
+  background: #8ee0ef;
+  border: 1px solid #0d0101;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.fun-fact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+/* Counter Styling */
+.counter {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  line-height: 1;
+}
+
+.plus {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #777;
+  margin-left: 5px;
+}
+
+/* Text Styling */
+.fun-fact-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 15px 0 0;
+}
+
+/* Shapes Styling */
+.all-shapes {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.fun-fact-shape {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

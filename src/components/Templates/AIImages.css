@@ -1,0 +1,86 @@
+/* Container Styling */
+.ai-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    margin-top: 150px;
+  }
+  
+  .cont_sm {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  
+  
+  /* Image Wrapper */
+  .img-wrap1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -100px;
+   
+  }
+  .img-wrap2 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -200px;
+  }
+
+  .img-wrap3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -300px;
+    margin-left: 1100px;
+ 
+  }
+  
+  .img-wrap1 img {
+    width: 30%;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+  }
+  
+  .innerAnimated {
+    opacity: 1;
+  }
+  
+  .fadeIn {
+    animation: fadeIn 1s forwards;
+  }
+  
+  .fadeInUp {
+    animation: fadeInUp 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .slide-heading {
+    font-size: 3rem;
+    position: relative; /* Required for absolute positioning of the sliding effect */
+    overflow: hidden;  /* Ensures that content is clipped to the element's bounds */
+    white-space: nowrap; /* Prevents text wrapping */
+    animation: slide 10s ease-in-out infinite; /* Apply animation */
+  }
+  
+  /* Animation definition */
+  @keyframes slide {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the left */
+    }
+    50% {
+      transform: translateX(0); /* End at the original position */
+    }
+    100% {
+      transform: translateX(-100%); /* Slide off-screen to the right */
+    }
+  }
