@@ -1,7 +1,12 @@
-import React from 'react';
-import './Footer.css'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faWhatsapp, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import React from "react";
+import "./Footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faWhatsapp,
+  faFacebook,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -9,12 +14,23 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="single-footer-widget footer-widget col-lg-3 col-md-6 widget_viba_footer_info">
-             <h3 style={{"color":"red",fontSize:"30px", fontWeight:"bold"}}>BEACH RESORT</h3>
-          
-         
+            <img
+              src="logo.png"
+              alt="Beach Resort Logo"
+              className="navbar-logo"
+              style={{
+                display: "flex",
+                width: "200px",
+              }}
+            />
+            <h3 style={{ color: "red" }}>Paradise Heaven</h3>
+
             <p>
-              Dicta sunt explicabo. Nemo enim ipsam volup tatem quia voluptas sit
-              aspernaturaut odit aut fugit, sed quia.
+              Resorts are places where guests visit for recreation, health, and
+              pleasure, often located in areas with outdoor facilities for
+              recreation and sports. Resorts are popular places that provide
+              relaxation, high-quality food, and facilities for healthy
+              activities.
             </p>
             <ul className="social-list">
               <li>
@@ -46,17 +62,10 @@ const Footer = () => {
               <li>
                 <a href="http://localhost:5173/about">About Us</a>
               </li>
+              <li>Ocean Fanatics</li>
               <li>
-                
-                  Ocean Fanatics
-                
+                <a href="http://localhost:5173/room">Rooms</a>
               </li>
-              <li>
-                
-              <a href="http://localhost:5173/room">Rooms</a> 
-                
-              </li>
-             
             </ul>
           </div>
 
@@ -66,16 +75,8 @@ const Footer = () => {
               <li>
                 <a href="http://localhost:5173/contact">Contact Us</a>
               </li>
-              <li>
-                
-                  Privacy Policy
-         
-              </li>
-              <li>
-                
-                  Terms Conditions
-          
-              </li>
+              <li>Privacy Policy</li>
+              <li>Terms Conditions</li>
               <li>
                 <a href="http://localhost:5173/faq">FAQs</a>
               </li>

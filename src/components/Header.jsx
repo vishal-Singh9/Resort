@@ -4,7 +4,8 @@ function Header() {
   return (
     <div >
       <nav className="navbar navbar-expand-lg  bg-body-tertiary">
-      <h1 style={{
+      <a className="navbar-brand" href="/">
+            <img src='logo.png' alt="Beach Resort Logo" className="navbar-logo" style={{
       color:"Red",
       fontSize:"30px",
       fontWeight:"bold",
@@ -12,8 +13,12 @@ function Header() {
       justifyContent:"center",
       alignItems:"center",
       marginLeft:"20px",
-    }}>BEACH RESORT</h1>
+    }} />
+    <h6 style={{marginLeft:"10px",color:"red",fontSize:"20px"}}>Paradise Heaven</h6>
+          </a>
   <div className="container-fluid">
+
+ 
   
    
     <div className="collapse navbar-collapse" id="navbarSupportedContent">

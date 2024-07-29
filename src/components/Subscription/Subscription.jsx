@@ -47,8 +47,7 @@ const Subscription = () => {
               <span className="title">Subscribe</span>
               <h2>Subscribe and stay updated!</h2>
               <p>
-                Dicta sunt explicabo. Nemo enim ipsam volup tatem quia voluptas
-                sit aspernaturaut odit aut fugit, sed quia.
+              Essentially, a resort is everything a hotel is with a little more and aims to provide a luxury stay.
               </p>
               <div className="input-box">
                 <form className="mailchimp subscribe-form" onSubmit={handleSubmit} noValidate>

@@ -11,3 +11,18 @@ body {
 }
 
 /* Navbar background and overall styling */
+
+.navbar-logo {
+  height: 100px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Spacing between logo and text */
+  transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1); /* Slightly enlarge logo on hover */
+}
+
+.bg-body-tertiary{
+background-color: rgb(67, 15, 162);
+}

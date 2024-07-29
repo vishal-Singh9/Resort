@@ -9,7 +9,7 @@ const AIImages = () => {
     >
       <div className="cont cont_sm">
        
-        <h2 class="slide-heading">Create Premium Images with AI Engine or our AI Helper</h2>
+        <h2 className="slide-heading">Create Premium Images with AI Engine or our AI Helper</h2>
 
         <div className="">
           <div className="img-wrap1">
