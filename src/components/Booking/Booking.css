@@ -13,9 +13,11 @@
   box-sizing: border-box;
 }
 
+
 .booking-page h1 {
   text-align: center;
   margin-bottom: 20px;
+
 }
 
 .booking-form .form-group {

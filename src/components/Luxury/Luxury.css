@@ -1,0 +1,104 @@
+/* Container Styles */
+.elementor-section {
+  display: flex;
+  width: 1144px;
+  margin-left: 107px;
+  margin-top: -107px;
+}
+
+.elementor-container {
+  width: 100%;
+}
+.elementor1{
+  margin-left: 300px;
+  width: 100%;
+  margin-top: 300px;
+}
+.elementor2{
+  margin-left: 300px;
+  width: 100%;
+}
+.elementor-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elementor-column {
+  flex: 1;
+  padding: 15px;
+}
+
+/* Image Styles */
+.elementor-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Text Content Styles */
+.elementor-widget-container {
+  margin-bottom: 20px;
+}
+
+.elementor-widget-heading .sub-title {
+  display: block;
+  font-size: 20px;
+  color: #09017e;
+  margin-bottom: 10px;
+}
+
+.elementor-heading-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.elementor-text-editor {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* Button Styles */
+.elementor-button-wrapper {
+  text-align: left;
+}
+
+.elementor-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1d8f43;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  margin-left: 300px;
+}
+
+.elementor-button:hover {
+  background-color: #005bb5;
+}
+
+.elementor-button-icon {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .elementor-section {
+    flex-direction: column;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .elementor-button-wrapper {
+    text-align: center;
+  }
+
+  .elementor-heading-title,
+  .elementor-text-editor {
+    text-align: center;
+  }
+}

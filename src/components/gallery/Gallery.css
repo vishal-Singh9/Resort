@@ -1,0 +1,44 @@
+.gallery-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.gallery-animation {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+}
+
+.gallery-item {
+  display: inline-block;
+  position: relative;
+  margin: 5px;
+}
+
+.gallery-item img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

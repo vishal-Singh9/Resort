@@ -10,6 +10,8 @@ import Subscription from './Subscription/Subscription';
 import FunFacts from './FunFact/FunFacts';
 import Footer from './Footer/Footer';
 import CopyRight from './CopyRight/Copyright';
+import Luxury from './Luxury/Luxury';
+import Gallery from './gallery/Gallery';
 
 function Home() {
   return (
@@ -17,11 +19,13 @@ function Home() {
    <HomePage/>
    <About/>
    <Services/>
+   <Luxury/>
    <BlogPage/>
    <AIImages/>
    <BookingPage/>
    <Feature/>
    <FunFacts/>
+   <Gallery/>
    <Subscription/>
    <Footer/>
    <CopyRight/>

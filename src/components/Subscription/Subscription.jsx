@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import './Subscription.css';
-import { getDatabase ,set,ref} from 'firebase/database';
+import { getDatabase, set, ref } from 'firebase/database';
 import { app } from '../../firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Subscription = () => {
   const [email, setEmail] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
-  const db =getDatabase(app);
+  const db = getDatabase(app);
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -16,20 +18,28 @@ const Subscription = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    set(ref(db, 'subscribers'), { email: email })
+
     if (!email.includes('@')) {
       setErrorMessage('An email address must contain a single @.');
+      toast.error('An email address must contain a single @.');
       return;
     }
-    setTimeout(() => {
-      setSuccessMessage('You have successfully subscribed!');
-      setErrorMessage('');
-      setEmail('');
-    }, 1000);
+
+    set(ref(db, 'subscribers'), { email: email })
+      .then(() => {
+        setSuccessMessage('You have successfully subscribed!');
+        toast.success('You have successfully subscribed!');
+        setEmail('');
+        setErrorMessage('');
+      })
+      .catch((error) => {
+        setErrorMessage('Subscription failed.');
+        toast.error('Subscription failed.');
+      });
   };
 
   return (
-    <div className="subscription-warp ">
+    <div className="subscription-warp">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-5 col-md-4">
@@ -47,7 +57,7 @@ const Subscription = () => {
               <span className="title">Subscribe</span>
               <h2>Subscribe and stay updated!</h2>
               <p>
-              Essentially, a resort is everything a hotel is with a little more and aims to provide a luxury stay.
+                Essentially, a resort is everything a hotel is with a little more and aims to provide a luxury stay.
               </p>
               <div className="input-box">
                 <form className="mailchimp subscribe-form" onSubmit={handleSubmit} noValidate>
@@ -83,6 +93,7 @@ const Subscription = () => {
           className="subscription-shape2"
         />
       </div>
+      <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
     </div>
   );
 };

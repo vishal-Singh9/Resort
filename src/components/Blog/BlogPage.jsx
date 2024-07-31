@@ -40,7 +40,7 @@ const BlogPage = () => {
     <div className="blog-page">
       <div className="container">
         <div className="row">
-          <h1 className=" col-lg-12 text-center mb-5 ">Blog</h1>
+          <h1 className=" col-lg-12 text-center mb-5  fw-bold ">Blog</h1>
           <div className="col-lg-8">
             {posts.map((post) => (
               <BlogCard key={post.id} post={post} />

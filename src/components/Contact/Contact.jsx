@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import { getDatabase,ref,set } from 'firebase/database';
+import { getDatabase, ref, set } from 'firebase/database';
 import { app } from '../../firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,21 +16,23 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));             
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    set(ref(db, 'contacts/' + formData.name), formData).then(() => {
-      alert('Message sent successfully!');
-      onclose();
+    set(ref(db, 'contacts/' + formData.name), formData)
+      .then(() => {
+        toast.success(
+          <>
+             Message sent successfully!
+          </>
+        );        setFormData({ name: '', email: '', message: '' }); 
 
-    })
-    .catch((error) => {
-      alert('Error sending message: ' + error.message);
-
-})
+      })
+      .catch((error) => {
+        toast.error('Error sending message: ' + error.message);
+      });
   };
 
   return (
@@ -69,6 +73,7 @@ const Contact = () => {
         </div>
         <button type="submit">Send Message</button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

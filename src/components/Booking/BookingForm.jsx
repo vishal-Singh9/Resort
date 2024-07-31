@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Booking.css'; 
 import { getDatabase, ref, set } from 'firebase/database';
 import { app } from '../../firebase';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const roomTypes = ['Single', 'Double', 'Suite'];
 const db = getDatabase(app);
@@ -27,8 +29,11 @@ const BookingPage = () => {
     const userId = Date.now();
     set(ref(db, `book/${userId}`), form)
       .then(() => {
-        alert(`Booking submitted: ${JSON.stringify(form, null, 2)}`);
+        toast.success(<>
+        Booking Successfully
+        </>);
         setForm(initialFormState);
+        
       })
       .catch((error) => {
         console.error("Error writing to database: ", error);
@@ -104,6 +109,7 @@ const BookingPage = () => {
         </div>
         <button type="submit" className="submit-button">Submit Booking</button>
       </form>
+      <ToastContainer/>
     </div> </div>
   );
 };

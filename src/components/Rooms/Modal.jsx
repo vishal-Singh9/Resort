@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Modal.css";
 import { app } from "../../firebase";
 import { getDatabase, ref, set } from "firebase/database";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Modal = ({ room, onClose, onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -16,22 +18,41 @@ const Modal = ({ room, onClose, onSubmit }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));             
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    set(ref(db, "bookings/" + formData.name), formData);
-    console.log(formData);
-    onSubmit(formData);
-    onClose();
-  };
+    set(ref(db, "bookings/" + formData.name), formData)
+    .then(() => {
+      toast.success(
+        <>
+        Successfully booked 
+        </>
+      );
+     setFormData({
+        name: "",
+        age: "",
+        email: "",
+        phone: "",
+        roomType: room ? room.name : "",
+      });
+      onSubmit(formData);
+    }
 
+    )
+  .catch((error) => {
+    toast.error('Booking failed: ' + error.message);
+  }
+  );
+    
+}
+    
+   
   return (
     <div className="modal">
-      
       <form onSubmit={handleSubmit}>
-      <h2>Book {room?.name}</h2>
+        <h2>Book {room?.name}</h2>
         <label>
           Name:
           <input
@@ -86,6 +107,8 @@ const Modal = ({ room, onClose, onSubmit }) => {
           Cancel
         </button>
       </form>
+      <ToastContainer />
+
     </div>
   );
 };
