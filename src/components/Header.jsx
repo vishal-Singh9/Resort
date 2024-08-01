@@ -54,13 +54,10 @@ function Header() {
                   Blog
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="/contact"
-                >
-                  Contact
+
+              <li>
+                <a className="nav-link active" href="/room">
+                  Rooms
                 </a>
               </li>
 
@@ -75,11 +72,6 @@ function Header() {
                   Pages
                 </a>
                 <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="/room">
-                      Rooms
-                    </a>
-                  </li>
                   <li>
                     <a className="dropdown-item" href="/services">
                       Services
@@ -96,6 +88,17 @@ function Header() {
                 </ul>
               </li>
             </ul>
+            <div>
+              <button className="nav-btn">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href="/contact"
+                >
+                  Contact
+                </a>
+              </button>
+            </div>
           </div>
         </div>
       </nav>

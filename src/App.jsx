@@ -26,11 +26,9 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/booking" element={<BookingPage />} />
             <Route path="/blog" element={<BlogPage />} />
-            <Route path="/contact" element={<Contact/>} />
-
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </Router>
-
       </div>
     </>
   );

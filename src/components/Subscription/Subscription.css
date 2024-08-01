@@ -1,8 +1,16 @@
+.subs{
+  background-color: rgb(122, 215, 234);
+  height: 500px;
+    width: 90%;
+    margin-left: 90px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 .subscription-warp {
     padding-top: 125px;
     padding-bottom: 125px;
  position: relative;
-  }
+}
  
   
   .subscription-image {
@@ -114,4 +122,14 @@
       transform: translate3d(0, 0, 0);
     }
   }
+  
+
+
+
+
+  
+
+
+
+
   

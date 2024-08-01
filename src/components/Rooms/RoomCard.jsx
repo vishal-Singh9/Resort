@@ -6,6 +6,8 @@ const RoomCard = ({ room, onBook }) => {
     onBook(room);
   };
 
+  
+
   return (
     <div className="room-card">
       <img src={room.image} alt={room.name} className="room-image" />
@@ -15,7 +17,9 @@ const RoomCard = ({ room, onBook }) => {
         <p>Price: ${room.price}</p>
         <button className="book-button" onClick={handleBookClick}>
           Book Now
-        </button>
+        </button >
+      
+       
       </div>
     </div>
   );

@@ -39,6 +39,8 @@ const Subscription = () => {
   };
 
   return (
+
+    <div className='subs'>
     <div className="subscription-warp">
       <div className="container">
         <div className="row align-items-center">
@@ -94,7 +96,7 @@ const Subscription = () => {
         />
       </div>
       <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-    </div>
+    </div></div>
   );
 };
 

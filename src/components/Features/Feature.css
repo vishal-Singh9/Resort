@@ -2,6 +2,20 @@
     text-align: center;
     padding: 50px 0;
     margin-top: 150px;
+   
+  }
+ 
+  #features {
+    background-image: url(f.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /* This makes the background image fixed in place */
+    height: 100vh;
+    width: 100%;
+    z-index: -1; /* Ensure the background is behind other content */
+    opacity: 0.8; /* Optional: control transparency of the background image */
+    animation: fadeIn 1s forwards;
   }
   
   .cont {
@@ -11,10 +25,12 @@
   
   .sup {
     font-size: 1.2rem;
-    color: #1814ee;
+    color: #d1d1f6;
     margin-bottom: 10px;
 
   }
+
+  
 
  
   
@@ -24,6 +40,7 @@
     margin-bottom: 40px;
     opacity: 0;
     animation: fadeIn 1s forwards;
+    color: #c4ed0d;
   }
   
   .grid {

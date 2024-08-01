@@ -28,8 +28,7 @@ const HomePage = () => {
                       <div className="content">
                         <span className="title">Where dreams unfold</span>
                         <h2>
-                          Experience <br />
-                          Unrivaled Luxury at Our Private Resort Paradise
+                        Welcome to ,<br /> Paradise heaven the Best Destination for Tranquility
                         </h2>
                       </div>
                     </div>

@@ -23,6 +23,8 @@ body {
   transform: scale(1.1); /* Slightly enlarge logo on hover */
 }
 
-.bg-body-tertiary{
-background-color: rgb(67, 15, 162);
+.nav-btn{
+  background-color: #2892d3;
+ 
 }
+
